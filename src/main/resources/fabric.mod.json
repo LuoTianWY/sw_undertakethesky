@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "sw_undertakethesky",
+  "version": "${version}",
+
+  "name": "第二世界：承天",
+  "description": "",
+  "authors": [
+    "落天望月"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/sw_undertakethesky/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.Luo_Tian_WY.sw_undertakethesky.Main"
+    ]
+  },
+  "mixins": [
+    "sw_undertakethesky.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

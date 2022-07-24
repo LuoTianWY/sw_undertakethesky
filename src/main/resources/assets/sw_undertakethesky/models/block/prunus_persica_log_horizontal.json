@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "sw_undertakethesky:block/prunus_persica_log_top",
+    "side": "sw_undertakethesky:block/prunus_persica_log"
+  }
+}

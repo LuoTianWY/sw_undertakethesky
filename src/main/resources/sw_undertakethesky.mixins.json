@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.Luo_Tian_WY.sw_undertakethesky.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+  ],
+  "client": [
+    "MainMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
