@@ -1,8 +1,11 @@
 {
   "block.sw_undertakethesky.prunus_persica_log": "桃木原木",
+  "block.sw_undertakethesky.prunus_persica_planks": "桃木木板",
   "block.sw_undertakethesky.prunus_persica_leaves": "桃树树叶",
   "block.sw_undertakethesky.prunus_persica_sapling": "桃树树苗",
   "item.sw_undertakethesky.peach": "桃子",
   "block.sw_undertakethesky.flowering_prunus_persica_leaves": "开花的桃树树叶",
+  "item.sw_undertakethesky.peach_blossom": "桃花",
+  "item.sw_undertakethesky.plant_ash": "草木灰",
   "itemGroup.sw_undertakethesky.general": "第二世界：承天"
 }

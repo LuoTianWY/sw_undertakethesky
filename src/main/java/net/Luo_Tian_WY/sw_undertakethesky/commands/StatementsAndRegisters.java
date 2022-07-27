@@ -46,6 +46,20 @@ public class StatementsAndRegisters {
             )
     );
     /**
+     * 注册桃木木板
+     */
+    public static final Block PRUNUS_PERSICA_PLANKS = registerBlockAndBlockItem(
+            "prunus_persica_planks",
+            new Block(
+                    FabricBlockSettings
+                            .of(Material.WOOD)
+                            .strength(2.0f)
+                            .mapColor(MapColor.GRAY)
+                            .sounds(BlockSoundGroup.WOOD)
+            )
+    );
+
+    /**
      * 注册桃树树叶
      */
     public static final LeavesBlock PRUNUS_PERSICA_LEAVES = (LeavesBlock) registerBlockAndBlockItem(
@@ -107,12 +121,36 @@ public class StatementsAndRegisters {
                             .group(ItemGroup.SW_GROUP)
             )
     );
+    /**
+     * 注册桃花
+     */
+    public static final Item PEACH_BLOSSOM = registerItem(
+            "peach_blossom",
+            new Item(
+                    new FabricItemSettings()
+                            .group(ItemGroup.SW_GROUP)
+            )
+    );
+
+    /**
+     * 注册草木灰
+     */
+    public static final Item PLANT_ASH = registerItem(
+            "plant_ash",
+            new Item(
+                    new FabricItemSettings()
+                            .group(ItemGroup.SW_GROUP)
+            )
+    );
 
     /**
      * 注册燃料
      */
     public static void registerFuel(){
         FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_LOG.asItem(), 300);
+        FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_SAPLING.asItem(), 100);
+        FuelRegistry.INSTANCE.add(PEACH_BLOSSOM.asItem(), 100);
+        FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_PLANKS.asItem(), 300);
     }
 
     /**

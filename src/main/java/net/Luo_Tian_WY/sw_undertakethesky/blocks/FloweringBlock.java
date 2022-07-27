@@ -51,7 +51,7 @@ public class FloweringBlock extends Block {
             world.setBlockState(pos, state.with(FLOWERING, false));//将该方块 flowering 设置为 false
             player.playSound(SoundEvents.ENTITY_SHEEP_SHEAR, 1.0f, 1.0f);//播放声音
             world.setBlockState(pos, StatementsAndRegisters.PRUNUS_PERSICA_LEAVES.getDefaultState());//通过 setBlockState 方法更换执行位置的方块
-            player.dropItem(StatementsAndRegisters.PEACH);//给予玩家对应物品
+            player.dropItem(StatementsAndRegisters.PEACH_BLOSSOM);//给予玩家对应物品
         }
 
         return ActionResult.SUCCESS;

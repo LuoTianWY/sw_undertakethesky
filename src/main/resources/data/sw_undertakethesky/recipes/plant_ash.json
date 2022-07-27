@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "ingredient":{
+    "tag": "minecraft:leaves"
+  },
+  "result": "sw_undertakethesky:plant_ash"
+}

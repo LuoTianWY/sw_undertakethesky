@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "sw_undertakethesky:block/prunus_persica_planks"
+  }
+}
