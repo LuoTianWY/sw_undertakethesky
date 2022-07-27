@@ -1,7 +1,7 @@
 package net.Luo_Tian_WY.sw_undertakethesky.sapling;
 
 //import net.Luo_Tian_WY.sw_undertakethesky.worldgen.SWUSConfiguredFeatures;
-import net.Luo_Tian_WY.sw_undertakethesky.commands.Registers;
+import net.Luo_Tian_WY.sw_undertakethesky.commands.StatementsAndRegisters;
 import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.registry.RegistryEntry;
@@ -16,6 +16,6 @@ public class PrunusPersicaSaplingGenerator extends SaplingGenerator {
     @Nullable
     @Override
     protected RegistryEntry<? extends ConfiguredFeature<?, ?>> getTreeFeature(Random random, boolean bees) {
-        return Registers.PRUNUS_PERSICA_TREE;
+        return StatementsAndRegisters.PRUNUS_PERSICA_TREE;
     }
 }

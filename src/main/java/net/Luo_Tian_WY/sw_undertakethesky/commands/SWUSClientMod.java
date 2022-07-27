@@ -1,6 +1,5 @@
 package net.Luo_Tian_WY.sw_undertakethesky.commands;
 
-import net.Luo_Tian_WY.sw_undertakethesky.blocks.PrunusPersica;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.client.render.RenderLayer;
@@ -10,7 +9,7 @@ public class SWUSClientMod implements ClientModInitializer {
     //cutout 为不透明或全透明
     @Override
     public void onInitializeClient(){
-        BlockRenderLayerMap.INSTANCE.putBlock(PrunusPersica.PRUNUS_PERSICA_SAPLING, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(PrunusPersica.PRUNUS_PERSICA_LEAVES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(StatementsAndRegisters.PRUNUS_PERSICA_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(StatementsAndRegisters.PRUNUS_PERSICA_LEAVES, RenderLayer.getCutout());
     }
 }
