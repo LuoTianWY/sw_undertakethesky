@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "sw_undertakethesky:block/prunus_persica_slab"
+    },
+    "type=double": {
+      "model": "sw_undertakethesky:block/prunus_persica_planks"
+    },
+    "type=top": {
+      "model": "sw_undertakethesky:block/prunus_persica_slab_top"
+    }
+  }
+}

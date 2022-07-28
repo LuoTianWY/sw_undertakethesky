@@ -58,7 +58,76 @@ public class StatementsAndRegisters {
                             .sounds(BlockSoundGroup.WOOD)
             )
     );
-
+    /**
+     * 注册桃木台阶
+     */
+    public static final SlabBlock PRUNUS_PERSICA_SLAB = (SlabBlock) registerBlockAndBlockItem(
+            "prunus_persica_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.of(Material.WOOD)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+            )
+    );
+    /**
+     * 注册桃木楼梯
+     */
+    public static final StairsBlock PRUNUS_PERSICA_STAIRS = (StairsBlock) registerBlockAndBlockItem(
+            "prunus_persica_stairs",
+            new StairsBlock(
+                    PRUNUS_PERSICA_PLANKS.getDefaultState(),
+                    FabricBlockSettings.copy(PRUNUS_PERSICA_PLANKS)
+            )
+    );
+    /**
+     * 注册桃木栅栏
+     */
+    public static final FenceBlock PRUNUS_PERSICA_FENCE = (FenceBlock) registerBlockAndBlockItem(
+            "prunus_persica_fence",
+            new FenceBlock(
+                    AbstractBlock.Settings.of(
+                            Material.WOOD)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+            )
+    );
+    /**
+     * 注册桃木栅栏门
+     */
+    public static final FenceGateBlock PRUNUS_PERSICA_FENCE_GATE = (FenceGateBlock) registerBlockAndBlockItem(
+            "prunus_persica_fence_gate",
+            new FenceGateBlock(
+                    AbstractBlock.Settings.of(
+                            Material.WOOD)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+            )
+    );
+    /**
+     * 注册桃木活板门
+     */
+    public static final TrapdoorBlock PRUNUS_PERSICA_TRAPDOOR = (TrapdoorBlock) registerBlockAndBlockItem(
+            "prunus_persica_trapdoor",
+            new TrapdoorBlock(
+                    AbstractBlock.Settings.of(Material.WOOD)
+                            .strength(3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .nonOpaque()
+                            .allowsSpawning(BlockSettingMethod::never)
+            )
+    );
+    /**
+     * 注册桃木门
+     */
+    public static final DoorBlock PRUNUS_PERSICA_DOOR = (DoorBlock) registerBlockAndBlockItem(
+            "prunus_persica_door",
+            new DoorBlock(
+                    FabricBlockSettings.of(Material.WOOD)
+                            .strength(3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .nonOpaque()
+            )
+    );
     /**
      * 注册桃树树叶
      */
@@ -144,16 +213,6 @@ public class StatementsAndRegisters {
     );
 
     /**
-     * 注册燃料
-     */
-    public static void registerFuel(){
-        FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_LOG.asItem(), 300);
-        FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_SAPLING.asItem(), 100);
-        FuelRegistry.INSTANCE.add(PEACH_BLOSSOM.asItem(), 100);
-        FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_PLANKS.asItem(), 300);
-    }
-
-    /**
      * 仅注册方块方法
      * @param name
      * @param block
@@ -194,6 +253,20 @@ public class StatementsAndRegisters {
      * 初始化方法
      */
     public StatementsAndRegisters(){
+        /**
+         * 注册燃料
+         */
+        FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_LOG.asItem(), 300);
+        FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_SAPLING.asItem(), 100);
+        FuelRegistry.INSTANCE.add(PEACH_BLOSSOM.asItem(), 100);
+        FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_PLANKS.asItem(), 300);
+        FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_SLAB.asItem(), 300);
+        FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_STAIRS.asItem(), 300);
+        FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_FENCE.asItem(), 300);
+        FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_FENCE_GATE.asItem(), 300);
+        FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_TRAPDOOR.asItem(), 300);
+        FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_DOOR.asItem(), 200);
+
         //以下进行 ColorProvider 注册，用以实现 ColorMap 渲染
         //注册桃树树叶
         ColorProviderRegistry.ITEM.register((((stack, tintIndex) -> 0x48b518)), PRUNUS_PERSICA_LEAVES);//注册物品栏中桃树树叶的颜色，硬编码为与橡树树叶相同

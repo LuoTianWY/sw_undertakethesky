@@ -1,6 +1,12 @@
 {
   "block.sw_undertakethesky.prunus_persica_log": "桃木原木",
   "block.sw_undertakethesky.prunus_persica_planks": "桃木木板",
+  "block.sw_undertakethesky.prunus_persica_slab": "桃木台阶",
+  "block.sw_undertakethesky.prunus_persica_stairs": "桃木楼梯",
+  "block.sw_undertakethesky.prunus_persica_fence": "桃木栅栏",
+  "block.sw_undertakethesky.prunus_persica_fence_gate": "桃木栅栏门",
+  "block.sw_undertakethesky.prunus_persica_trapdoor": "桃木活板门",
+  "block.sw_undertakethesky.prunus_persica_door": "桃木木门",
   "block.sw_undertakethesky.prunus_persica_leaves": "桃树树叶",
   "block.sw_undertakethesky.prunus_persica_sapling": "桃树树苗",
   "item.sw_undertakethesky.peach": "桃子",

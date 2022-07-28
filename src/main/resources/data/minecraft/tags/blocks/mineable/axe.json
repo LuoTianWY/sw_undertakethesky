@@ -3,6 +3,12 @@
   "values": [
     "sw_undertakethesky:prunus_persica_log",
     "sw_undertakethesky:prunus_persica_planks",
-    "sw_undertakethesky:prunus_persica_sapling"
+    "sw_undertakethesky:prunus_persica_sapling",
+    "sw_undertakethesky:prunus_persica_slab",
+    "sw_undertakethesky:prunus_persica_stairs",
+    "sw_undertakethesky:prunus_persica_fence",
+    "sw_undertakethesky:prunus_persica_fence_gate",
+    "sw_undertakethesky:prunus_persica_trapdoor",
+    "sw_undertakethesky:prunus_persica_door"
   ]
 }

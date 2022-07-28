@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_right",
+  "textures": {
+    "bottom": "sw_undertakethesky:block/prunus_persica_door_bottom",
+    "top": "sw_undertakethesky:block/prunus_persica_door_top"
+  }
+}

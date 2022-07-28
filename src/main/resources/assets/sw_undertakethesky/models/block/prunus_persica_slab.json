@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "sw_undertakethesky:block/prunus_persica_planks",
+    "side": "sw_undertakethesky:block/prunus_persica_planks",
+    "top": "sw_undertakethesky:block/prunus_persica_planks"
+  }
+}

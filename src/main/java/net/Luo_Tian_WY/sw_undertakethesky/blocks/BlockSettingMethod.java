@@ -11,8 +11,13 @@ public class BlockSettingMethod extends Blocks{
         return type == EntityType.PARROT || type == EntityType.OCELOT;
     }
 
-    //目的只是返回一个 false
+    //目的只是返回一个 false，给 suffocates 及 blockVision 方法使用
     public static boolean never(BlockState state, BlockView world, BlockPos pos){
+        return false;
+    }
+
+    //重载方法，给 allowSpawning 方法使用
+    public static Boolean never(BlockState state, BlockView world, BlockPos pos, EntityType<?> type) {
         return false;
     }
 }
