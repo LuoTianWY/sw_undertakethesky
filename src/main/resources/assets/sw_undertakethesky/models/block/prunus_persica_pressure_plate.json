@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_up",
+  "textures": {
+    "texture": "sw_undertakethesky:block/prunus_persica_planks"
+  }
+}

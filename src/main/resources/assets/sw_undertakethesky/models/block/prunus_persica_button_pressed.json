@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "sw_undertakethesky:block/prunus_persica_planks"
+  }
+}

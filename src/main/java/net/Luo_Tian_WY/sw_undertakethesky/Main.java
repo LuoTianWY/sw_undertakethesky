@@ -15,9 +15,11 @@ public class Main implements ModInitializer {
 	public void onInitialize() {
 		StatementsAndRegisters register = new StatementsAndRegisters();//调用注册类
 
+		//cutout 不透明或全透明, Translucent 半透明
 		BlockRenderLayerMap.INSTANCE.putBlock(StatementsAndRegisters.PRUNUS_PERSICA_SAPLING, RenderLayer.getCutout());//所以这才是起作用的渲染器
 		BlockRenderLayerMap.INSTANCE.putBlock(StatementsAndRegisters.FLOWERING_PRUNUS_PERSICA_LEAVES, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(StatementsAndRegisters.PRUNUS_PERSICA_DOOR, RenderLayer.getTranslucent());
+		BlockRenderLayerMap.INSTANCE.putBlock(StatementsAndRegisters.PRUNUS_PERSICA_TRAPDOOR, RenderLayer.getTranslucent());
 
 		SWUSClientMod render = new SWUSClientMod();//调用渲染器
 		//我 tm 怎么知道这句为啥没用

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "sw_undertakethesky:block/prunus_persica_pressure_plate"
+    },
+    "powered=true": {
+      "model": "sw_undertakethesky:block/prunus_persica_pressure_plate_down"
+    }
+  }
+}

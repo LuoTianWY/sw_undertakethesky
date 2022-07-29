@@ -129,6 +129,35 @@ public class StatementsAndRegisters {
             )
     );
     /**
+     * 注册桃木按钮
+     */
+    public static final WoodenButtonBlock PRUNUS_PERSICA_BUTTON = (WoodenButtonBlock) registerBlockAndBlockItem(
+            "prunus_persica_button",
+            new WoodenButtonBlock(
+                    FabricBlockSettings.of(Material.DECORATION)
+                            .noCollision()
+                            .strength(0.5F)
+                            .sounds(BlockSoundGroup.WOOD)
+            )
+    );
+    /**
+     * 注册桃木压力板
+     */
+    public static final PressurePlateBlock PRUNUS_PERSICA_PRESSURE_PLATE = (PressurePlateBlock) registerBlockAndBlockItem(
+            "prunus_persica_pressure_plate",
+            new PressurePlateBlock(
+                    PressurePlateBlock.ActivationRule.EVERYTHING,
+                    FabricBlockSettings.of(
+                            Material.WOOD,
+                            PRUNUS_PERSICA_PLANKS
+                                    .getDefaultMapColor()
+                    )
+                            .noCollision()
+                            .strength(0.5F)
+                            .sounds(BlockSoundGroup.WOOD)
+            )
+    );
+    /**
      * 注册桃树树叶
      */
     public static final LeavesBlock PRUNUS_PERSICA_LEAVES = (LeavesBlock) registerBlockAndBlockItem(
@@ -266,6 +295,8 @@ public class StatementsAndRegisters {
         FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_FENCE_GATE.asItem(), 300);
         FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_TRAPDOOR.asItem(), 300);
         FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_DOOR.asItem(), 200);
+        FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_BUTTON.asItem(), 300);
+        FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_PRESSURE_PLATE.asItem(), 300);
 
         //以下进行 ColorProvider 注册，用以实现 ColorMap 渲染
         //注册桃树树叶
