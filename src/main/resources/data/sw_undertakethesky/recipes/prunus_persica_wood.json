@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WW",
+    "WW"
+  ],
+  "key": {
+    "W": {
+      "item": "sw_undertakethesky:prunus_persica_log"
+    }
+  },
+  "result": {
+    "item": "sw_undertakethesky:prunus_persica_wood",
+    "count": 3
+  }
+}
