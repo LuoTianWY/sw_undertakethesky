@@ -1,15 +1,13 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "W"
-  ],
-  "key": {
-    "W": {
-      "item": "sw_undertakethesky:prunus_persica_log"
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "minecraft:prunus_persica_logs"
     }
-  },
+  ],
   "result": {
-    "item": "sw_undertakethesky:prunus_persica_planks",
-    "count": 4
+    "count": 4,
+    "item": "sw_undertakethesky:prunus_persica_planks"
   }
 }

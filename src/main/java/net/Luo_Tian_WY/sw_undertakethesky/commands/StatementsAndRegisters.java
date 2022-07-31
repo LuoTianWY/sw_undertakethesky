@@ -46,8 +46,6 @@ public class StatementsAndRegisters {
             )
     );
     /**
-<<<<<<< HEAD
-=======
      * 注册桃木木头
      */
     public static final PillarBlock PRUNUS_PERSICA_WOOD = (PillarBlock) registerBlockAndBlockItem(
@@ -59,7 +57,30 @@ public class StatementsAndRegisters {
             )
     );
     /**
->>>>>>> 41affb3 (增加了木头)
+     * 注册去皮桃木原木
+     */
+    public static final PillarBlock STRIPPED_PRUNUS_PERSICA_LOG = (PillarBlock) registerBlockAndBlockItem(
+            "stripped_prunus_persica_log",
+            new PillarBlock(
+                    FabricBlockSettings.
+                            of(Material.WOOD).
+                            strength(2.0f).
+                            mapColor(MapColor.GRAY).
+                            sounds(BlockSoundGroup.WOOD)
+            )
+    );
+    /**
+     * 注册去皮桃木木头
+     */
+    public static final PillarBlock STRIPPED_PRUNUS_PERSICA_WOOD = (PillarBlock) registerBlockAndBlockItem(
+            "stripped_prunus_persica_wood",
+            new PillarBlock(
+                    FabricBlockSettings.of(Material.WOOD)
+                            .strength(2.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+            )
+    );
+    /**
      * 注册桃木木板
      */
     public static final Block PRUNUS_PERSICA_PLANKS = registerBlockAndBlockItem(
@@ -312,6 +333,8 @@ public class StatementsAndRegisters {
         FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_BUTTON.asItem(), 300);
         FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_PRESSURE_PLATE.asItem(), 300);
         FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_WOOD.asItem(), 300);
+        FuelRegistry.INSTANCE.add(STRIPPED_PRUNUS_PERSICA_WOOD.asItem(), 300);
+        FuelRegistry.INSTANCE.add(STRIPPED_PRUNUS_PERSICA_LOG.asItem(), 300);
 
         //以下进行 ColorProvider 注册，用以实现 ColorMap 渲染
         //注册桃树树叶

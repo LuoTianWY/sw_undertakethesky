@@ -1,6 +1,8 @@
 {
   "values": [
     "sw_undertakethesky:prunus_persica_log",
-    "sw_undertakethesky:prunus_persica_wood"
+    "sw_undertakethesky:prunus_persica_wood",
+    "sw_undertakethesky:stripped_prunus_persica_log",
+    "sw_undertakethesky:stripped_prunus_persica_wood"
   ]
 }
