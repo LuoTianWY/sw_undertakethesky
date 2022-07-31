@@ -10,6 +10,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.block.*;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.item.BlockItem;
@@ -335,6 +336,10 @@ public class StatementsAndRegisters {
         FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_WOOD.asItem(), 300);
         FuelRegistry.INSTANCE.add(STRIPPED_PRUNUS_PERSICA_WOOD.asItem(), 300);
         FuelRegistry.INSTANCE.add(STRIPPED_PRUNUS_PERSICA_LOG.asItem(), 300);
+
+        //以下注册可去皮木头
+        StrippableBlockRegistry.register(PRUNUS_PERSICA_LOG, STRIPPED_PRUNUS_PERSICA_LOG);
+        StrippableBlockRegistry.register(PRUNUS_PERSICA_WOOD, STRIPPED_PRUNUS_PERSICA_WOOD);
 
         //以下进行 ColorProvider 注册，用以实现 ColorMap 渲染
         //注册桃树树叶
