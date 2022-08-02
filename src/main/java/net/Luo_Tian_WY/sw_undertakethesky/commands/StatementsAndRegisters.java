@@ -1,6 +1,7 @@
 package net.Luo_Tian_WY.sw_undertakethesky.commands;
 
 import net.Luo_Tian_WY.sw_undertakethesky.blocks.BlockSettingMethod;
+import net.Luo_Tian_WY.sw_undertakethesky.blocks.DecayedGrassAndFireflyBlock;
 import net.Luo_Tian_WY.sw_undertakethesky.blocks.FloweringBlock;
 import net.Luo_Tian_WY.sw_undertakethesky.blocks.ModSaplingBlock;
 import net.Luo_Tian_WY.sw_undertakethesky.sapling.PrunusPersicaSaplingGenerator;
@@ -276,7 +277,20 @@ public class StatementsAndRegisters {
                             .group(ItemGroup.SW_GROUP)
             )
     );
-
+    /**
+     * 注册腐草萤虫
+     */
+    public static final DecayedGrassAndFireflyBlock DECAYED_GRASS_AND_FIREFLY = (DecayedGrassAndFireflyBlock) registerBlockAndBlockItem(
+            "decayed_grass_and_firefly",
+            new DecayedGrassAndFireflyBlock(
+                    AbstractBlock.
+                            Settings.
+                            of(Material.LEAVES).
+                            strength(0.2f).
+                            ticksRandomly().
+                            nonOpaque()
+            )
+    );
     /**
      * 仅注册方块方法
      * @param name

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "sw_undertakethesky:block/decayed_grass_and_firefly"
+  }
+}
