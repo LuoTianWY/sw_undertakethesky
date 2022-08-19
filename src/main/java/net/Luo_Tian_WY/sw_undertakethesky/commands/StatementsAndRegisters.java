@@ -1,6 +1,7 @@
 package net.Luo_Tian_WY.sw_undertakethesky.commands;
 
 import net.Luo_Tian_WY.sw_undertakethesky.blocks.BlockSettingMethod;
+import net.Luo_Tian_WY.sw_undertakethesky.blocks.DecayedGrassAndFireflyBlock;
 import net.Luo_Tian_WY.sw_undertakethesky.blocks.FloweringBlock;
 import net.Luo_Tian_WY.sw_undertakethesky.blocks.ModSaplingBlock;
 import net.Luo_Tian_WY.sw_undertakethesky.sapling.PrunusPersicaSaplingGenerator;
@@ -9,12 +10,16 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.block.*;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
+import net.minecraft.particle.DefaultParticleType;
+import net.minecraft.particle.ParticleType;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DataPool;
@@ -46,8 +51,6 @@ public class StatementsAndRegisters {
             )
     );
     /**
-<<<<<<< HEAD
-=======
      * 注册桃木木头
      */
     public static final PillarBlock PRUNUS_PERSICA_WOOD = (PillarBlock) registerBlockAndBlockItem(
@@ -59,7 +62,30 @@ public class StatementsAndRegisters {
             )
     );
     /**
->>>>>>> 41affb3 (增加了木头)
+     * 注册去皮桃木原木
+     */
+    public static final PillarBlock STRIPPED_PRUNUS_PERSICA_LOG = (PillarBlock) registerBlockAndBlockItem(
+            "stripped_prunus_persica_log",
+            new PillarBlock(
+                    FabricBlockSettings.
+                            of(Material.WOOD).
+                            strength(2.0f).
+                            mapColor(MapColor.GRAY).
+                            sounds(BlockSoundGroup.WOOD)
+            )
+    );
+    /**
+     * 注册去皮桃木木头
+     */
+    public static final PillarBlock STRIPPED_PRUNUS_PERSICA_WOOD = (PillarBlock) registerBlockAndBlockItem(
+            "stripped_prunus_persica_wood",
+            new PillarBlock(
+                    FabricBlockSettings.of(Material.WOOD)
+                            .strength(2.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+            )
+    );
+    /**
      * 注册桃木木板
      */
     public static final Block PRUNUS_PERSICA_PLANKS = registerBlockAndBlockItem(
@@ -254,7 +280,24 @@ public class StatementsAndRegisters {
                             .group(ItemGroup.SW_GROUP)
             )
     );
-
+    /**
+     * 注册腐草萤虫
+     */
+    public static final DecayedGrassAndFireflyBlock DECAYED_GRASS_AND_FIREFLY = (DecayedGrassAndFireflyBlock) registerBlockAndBlockItem(
+            "decayed_grass_and_firefly",
+            new DecayedGrassAndFireflyBlock(
+                    AbstractBlock.Settings.of(Material.LEAVES)
+                            .strength(0.2f)
+                            .ticksRandomly()
+                            .nonOpaque()
+                            .breakInstantly()
+                            .luminance((state) -> {
+                                return 10;
+                            })
+                            .noCollision()
+                            .sounds(BlockSoundGroup.GRASS)
+            )
+    );
     /**
      * 仅注册方块方法
      * @param name
@@ -293,6 +336,11 @@ public class StatementsAndRegisters {
     };
 
     /**
+     * 粒子效果定义
+     */
+    public static final DefaultParticleType FIREFLY = FabricParticleTypes.simple();
+
+    /**
      * 初始化方法
      */
     public StatementsAndRegisters(){
@@ -311,10 +359,18 @@ public class StatementsAndRegisters {
         FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_DOOR.asItem(), 200);
         FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_BUTTON.asItem(), 300);
         FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_PRESSURE_PLATE.asItem(), 300);
-<<<<<<< HEAD
-=======
         FuelRegistry.INSTANCE.add(PRUNUS_PERSICA_WOOD.asItem(), 300);
->>>>>>> 41affb3 (增加了木头)
+        FuelRegistry.INSTANCE.add(STRIPPED_PRUNUS_PERSICA_WOOD.asItem(), 300);
+        FuelRegistry.INSTANCE.add(STRIPPED_PRUNUS_PERSICA_LOG.asItem(), 300);
+
+        /**
+         * 粒子效果注册
+         */
+        Registry.register(Registry.PARTICLE_TYPE, new Identifier("sw_undertakethesky", "firefly"), FIREFLY);
+
+        //以下注册可去皮木头
+        StrippableBlockRegistry.register(PRUNUS_PERSICA_LOG, STRIPPED_PRUNUS_PERSICA_LOG);
+        StrippableBlockRegistry.register(PRUNUS_PERSICA_WOOD, STRIPPED_PRUNUS_PERSICA_WOOD);
 
         //以下进行 ColorProvider 注册，用以实现 ColorMap 渲染
         //注册桃树树叶

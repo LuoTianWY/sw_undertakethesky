@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "sw_undertakethesky:block/stripped_prunus_persica_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "sw_undertakethesky:block/stripped_prunus_persica_wood"
+    },
+    "axis=z": {
+      "model": "sw_undertakethesky:block/stripped_prunus_persica_wood",
+      "x": 90
+    }
+  }
+}

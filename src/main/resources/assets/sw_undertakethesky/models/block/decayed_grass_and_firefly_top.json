@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "sw_undertakethesky:block/decayed_grass_and_firefly_top"
+  }
+}

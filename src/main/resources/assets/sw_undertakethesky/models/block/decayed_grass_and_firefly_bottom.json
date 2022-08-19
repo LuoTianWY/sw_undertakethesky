@@ -1,0 +1,6 @@
+{
+  "parent": "sw_undertakethesky:block/new",
+  "textures": {
+    "new": "sw_undertakethesky:block/decayed_grass_and_firefly_bottom"
+  }
+}

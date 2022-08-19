@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "G": {
+      "item": "sw_undertakethesky:peach_blossom"
+    },
+    "S": {
+      "item": "sw_undertakethesky:plant_ash"
+    },
+    "O": {
+      "tag": "minecraft:leaves"
+    }
+  },
+  "pattern": [
+    " G ",
+    "SSS",
+    "OOO"
+  ],
+  "result": {
+    "item": "sw_undertakethesky:decayed_grass_and_firefly"
+  }
+}

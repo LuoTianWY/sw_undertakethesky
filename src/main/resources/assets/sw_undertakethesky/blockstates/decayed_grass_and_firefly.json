@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "sw_undertakethesky:block/decayed_grass_and_firefly_bottom"
+    },
+    "half=upper": {
+      "model": "sw_undertakethesky:block/decayed_grass_and_firefly_top"
+    }
+  }
+}
